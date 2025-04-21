@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .form-container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px hsla(0, 0%, 0%, 0.2);
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Heart Disease Prediction</h1>
+        <form action="/predict" method="post">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Gmail:</label>
+            <input type="email" name="gmail" required>
+
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>Gender (0 = Female, 1 = Male):</label>
+            <input type="number" name="sex" min="0" max="1" required>
+
+            <label>Chest Pain Type (0–3):</label>
+            <input type="number" name="cp" required>
+
+            <label>Resting BP(0-3):</label>
+            <input type="number" name="trestbps"  min="0" max="3" required>
+
+            <label>Cholesterol(0-2):</label>
+            <input type="number" name="chol" min="0" max="2" required>
+
+            <label>Fasting Blood Sugar > 120 (1=True, 0=False):</label>
+            <input type="number" name="fbs" required>
+
+            <label>Rest ECG (0–2):</label>
+            <input type="number" name="restecg" required>
+
+            <label>Max Heart Rate(160-180):</label>
+            <input type="number" name="thalach" required>
+
+            <label>Exercise-Induced Angina (1=True, 0=False):</label>
+            <input type="number" name="exang" required>
+
+            <label>Oldpeak:</label>
+            <input type="text" name="oldpeak" required>
+
+            <label>Slope (0–2):</label>
+            <input type="number" name="slope" required>
+
+            <label>Major Vessels (0–3):</label>
+            <input type="number" name="ca" required>
+
+            <label>Thal (1=Normal, 2=Fixed, 3=Reversible):</label>
+            <input type="number" name="thal" required>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>

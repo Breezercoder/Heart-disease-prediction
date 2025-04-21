@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .result-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        .result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .recommendation {
+            margin-top: 25px;
+            font-style: italic;
+            color: #444;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: white;
+            background: #007BFF;
+            padding: 10px 20px;
+            border-radius: 6px;
+        }
+        a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Hello {{ name }}!</h2>
+        <div class="result">{{ result }}</div>
+        <div class="recommendation">{{ recommendation }}</div>
+        <a href="/">Try Again</a>
+    </div>
+</body>
+</html>
